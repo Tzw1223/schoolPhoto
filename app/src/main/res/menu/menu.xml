@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="新闻"
+        android:id="@+id/id1"
+        />
+    <item
+        android:title="随手拍"
+        android:id="@+id/id2"
+        />
+    <item
+        android:title="主页"
+        android:id="@+id/id3"
+        />
+
+</menu>

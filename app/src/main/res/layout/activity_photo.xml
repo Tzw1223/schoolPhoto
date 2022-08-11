@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PhotoActivity">
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_shape"
+        android:text="上 传"
+        android:textColor="@color/white"
+        android:textSize="18sp"></Button>
+
+
+    <Button
+        android:id="@+id/locationBtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/degree"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/location_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/locationtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/locationBtn"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/locationBtn"
+        android:orientation="horizontal"
+        android:text="点此获取位置信息"
+        android:textSize="16sp"
+        android:weightSum="3" />
+
+    <EditText
+        android:id="@+id/photoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submit"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="请输入标题"></EditText>
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photoTitle"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:hint="请输入问题描述"></EditText>
+
+
+    <com.phz.photopicker.view.MyGridView
+        android:id="@+id/addPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:numColumns="3"
+        android:verticalSpacing="6dp" />
+
+    <RadioGroup
+        android:id="@+id/questionType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addPhoto"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RadioButton
+            android:id="@+id/questionTypeButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安全隐患"
+            android:layout_margin="10dp"
+            android:layout_weight="1">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/questionTypeButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卫生问题"
+            android:layout_margin="10dp"
+            android:layout_weight="1">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/questionTypeButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="秩序问题"
+            android:layout_margin="10dp"
+            android:layout_weight="1">
+        </RadioButton>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/degree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionType"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RadioButton
+            android:id="@+id/degreeButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="重要"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/degreeButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="一般"></RadioButton>
+    </RadioGroup>
+
+</RelativeLayout>
